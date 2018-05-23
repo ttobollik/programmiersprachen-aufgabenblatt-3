@@ -19,6 +19,7 @@ class Circle {
     float circumference_;
     Circle();
     Circle(std::string const& name_);
+    Circle(float radius);
     Circle(float radius, float x, float y, std::string const& name_);
     Circle(float radius, std::string const& name_);
     Circle(float radius, Color const& color, std::string const& name_);

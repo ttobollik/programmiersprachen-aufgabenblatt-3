@@ -5,6 +5,8 @@
 
     Circle::Circle() : radius_{1.0f}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}, name_{"my_circle"}{}
 
+    Circle::Circle(float radius) : radius_{radius}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}, name_{"my_circle"}{}
+
     Circle::Circle(std::string const& name_) : radius_{1.0f}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}, name_{name_}{}
 
     Circle::Circle(float radius, float x, float y, std::string const& name_): radius_{radius}, center_{x,y}, color_{0.0, 0.0, 0.0}, name_{name_} {}
