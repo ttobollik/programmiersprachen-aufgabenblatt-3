@@ -10,11 +10,11 @@
 
 //Aufgabe 3.8
 
-// struct smaller_then {
-//     bool operator() (Circle c1, Circle c2) {
-//         return c1.get_radius() < c2.get_radius();
-//     }
-// };
+struct smaller_then {
+    bool operator() (Circle c1, Circle c2) {
+        return c1.get_radius() < c2.get_radius();
+    }
+};
 
 struct Rectangle{
     float radius_;
@@ -34,18 +34,17 @@ int main(int argc, char *argv[])
   sorted_circles.push_back(mars);
 
 
-  std::swap(moon, saturn);
-//  auto comparator = [](Circle const& c1, Circle const& c2) -> bool { return c1.radius_ < c2.radius_;};
 
-  //std::sort(sorted_circles.begin(), sorted_circles.end(), comparator);
+ auto comparator = [](Circle const& c1, Circle const& c2) -> bool { return c1.get_radius() < c2.get_radius();};
 
-//   return Catch::Session().run(argc, argv);
+ std::sort(sorted_circles.begin(), sorted_circles.end());
+
     return 0;
-//Aufgabe 3.7
-  //sort(sorted_circles.begin(), sorted_circles.end(), [](Circle c1, Circle c2){c1.get_radius() > c2.get_radius()});
+ //Aufgabe 3.7
+  sort(sorted_circles.begin(), sorted_circles.end(), comparator);
 
 //Aufgabe 3.8
- //smaller_then fn;
- //sort(sorted_circles.begin(), sorted_circles.end(), smaller_then());
+ smaller_then fn;
+ sort(sorted_circles.begin(), sorted_circles.end(), smaller_then());
 
 }
