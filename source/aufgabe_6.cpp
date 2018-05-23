@@ -1,5 +1,5 @@
-// #define CATCH_CONFIG_RUNNER
-// #include <catch.hpp>
+#define CATCH_CONFIG_RUNNER
+#include <catch.hpp>
 #include "color.hpp"
 #include "circle.hpp"
 #include <algorithm>
@@ -16,35 +16,32 @@ struct smaller_then {
     }
 };
 
-struct Rectangle{
-    float radius_;
-    std::string name_;
-};
-
-int main(int argc, char *argv[])
-{
 
 //Aufgabe 3.6
-  std::vector<Circle> sorted_circles;
+  
   Circle moon(1, "moon");
-  sorted_circles.push_back(moon);
   Circle saturn(2, "saturn");
-  sorted_circles.push_back(saturn);
   Circle mars(3, "mars");
-  sorted_circles.push_back(mars);
+  std::vector<Circle> sorted_circles{moon, saturn, mars};
 
 
+TEST_CASE("sortierte Zahlen", "[sort]") {
+REQUIRE(std::is_sorted(sorted_circles.begin(), sorted_circles.end()));
+}
 
- auto comparator = [](Circle const& c1, Circle const& c2) -> bool { return c1.get_radius() < c2.get_radius();};
+int main(int argc, char *argv[])
+{ 
 
  std::sort(sorted_circles.begin(), sorted_circles.end());
 
-    return 0;
  //Aufgabe 3.7
+  auto comparator = [](Circle const& c1, Circle const& c2) -> bool { return c1.get_radius() < c2.get_radius();};
   sort(sorted_circles.begin(), sorted_circles.end(), comparator);
 
 //Aufgabe 3.8
  smaller_then fn;
  sort(sorted_circles.begin(), sorted_circles.end(), smaller_then());
+
+return Catch::Session().run(argc, argv);
 
 }
