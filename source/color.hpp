@@ -3,7 +3,7 @@
 #define COLOR_HPP
 #include <iostream>     
 #include <algorithm>
-using namespace std;
+
 
 struct Color {
   float r;
@@ -13,8 +13,11 @@ struct Color {
 
   Color(float x) :
     r{x}, g{x}, b{x} {
-        x = max(x,1.0f) || min(x,0.0f);
+        x = std::max(x,1.0f) || std::min(x,0.0f);
     }
+
+   //clamp
+   //std::max(0.0, std::min(1.0, x));
 
   Color(float r1, float g1, float b1) :
     r{r1}, g{g1}, b{b1} {

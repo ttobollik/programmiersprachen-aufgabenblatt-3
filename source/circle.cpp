@@ -3,15 +3,17 @@
 #include <iostream>
 #include <cmath>
 
-    Circle::Circle() : radius_{1.0f}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}{}
+    Circle::Circle() : radius_{1.0f}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}, name_{"my_circle"}{}
 
-    Circle::Circle(float radius, float x, float y): radius_{radius}, center_{x,y}, color_{0.0, 0.0, 0.0} {}
+    Circle::Circle(std::string const& name_) : radius_{1.0f}, center_{0.0,0.0}, color_{0.0, 0.0, 0.0}, name_{name_}{}
 
-    Circle::Circle(float radius) : radius_{radius}, center_{0.0,0.0},color_{0.0, 0.0, 0.0} {}
+    Circle::Circle(float radius, float x, float y, std::string const& name_): radius_{radius}, center_{x,y}, color_{0.0, 0.0, 0.0}, name_{name_} {}
 
-    Circle::Circle(float radius, Color color) : radius_{radius}, center_{0.0,0.0}, color_{color} {}
+    Circle::Circle(float radius, std::string const& name_) : radius_{radius}, center_{0.0,0.0},color_{0.0, 0.0, 0.0}, name_{name_} {}
 
-    Circle::Circle(Color color) : radius_{1.0f}, center_{0.0,0.0}, color_{color} {}
+    Circle::Circle(float radius, Color const& color, std::string const& name_) : radius_{radius}, center_{0.0,0.0}, color_{color}, name_{name_} {}
+
+    Circle::Circle(Color const& color, std::string const& name_) : radius_{1.0f}, center_{0.0,0.0}, color_{color}, name_{name_} {}
 
     float Circle::get_radius() const{
         return radius_;
@@ -30,31 +32,7 @@
         return circumference_;
     }
 
-    void Circle::draw(Window& window) {
-        float start_point = center_.x_ - radius_;
-        float end_point = center_.x_ + radius_;
-        float y = 0.0f;
-        for(float x = start_point; x <= end_point; x += 0.1f) {
-            //Formel zur Kreisberechnung: (x-center_x)^2+(y-center_y)^2=r^2 
-            y = sqrt((radius_ * radius_) - ((x - center_.x_) * (x - center_.x_))); 
-            window.draw_point(x,y + center_.y_,color_.r, color_.g, color_.b);
-            window.draw_point(x,-y + center_.y_,color_.r, color_.g, color_.b);
-        }
-    }
-
-    void Circle::draw(Window& window, Color color) {
-        float start_point = center_.x_ - radius_;
-        float end_point = center_.x_ + radius_;
-        float y = 0.0f;
-        for(float x = start_point; x <= end_point; x += 0.1f) {
-            //Formel zur Kreisberechnung: (x-center_x)^2+(y-center_y)^2=r^2 
-            y = sqrt((radius_ * radius_) - ((x - center_.x_) * (x - center_.x_))); 
-            window.draw_point(x,y + center_.y_,color.r, color.g, color.b);
-            window.draw_point(x,-y + center_.y_,color.r, color.g, color.b);
-        }
-    }
-
-    bool Circle::is_inside(Vec2 v1) const{
+    bool Circle::is_inside(Vec2 const& v1) const{
         bool response;
         if(((v1.x_ - center_.x_)*(v1.x_ - center_.x_)+(v1.y_ - center_.y_)*(v1.y_ - center_.y_)) < (radius_ * radius_)) {
             response = true;
@@ -63,3 +41,38 @@
         }
         return response;
     }
+
+
+//Aufgabenblatt 3
+    std::ostream& operator<<(std::ostream& os, Circle const& c) {
+        c.print(os);
+      return os;
+    }
+
+    std::ostream& Circle::print(std::ostream& os) const {
+        os << "Kreisinformation:" << radius_ << "\n Color: (" << color_.r << ", " << color_.g <<  ", " << color_.b << ")\n Position: (" << center_ << ")\n Name: " << name_ << "\n" ;
+        return os;
+    }
+
+    std::string const& Circle::get_name() const {
+        return name_;
+    }
+
+
+    bool operator<(Circle const& c1, Circle const& c2) {
+        return c1.get_radius()< c2.get_radius();
+    }
+
+    bool operator>(Circle const& c1, Circle const& c2) {
+        return c1.get_radius()> c2.get_radius();
+    }
+
+    bool operator==(Circle const& c1, Circle const& c2) {
+        if(c1.get_radius() == c2.get_radius()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+

@@ -3,7 +3,7 @@
 #define RECTANGLE_HPP
 #include "vec2.hpp"
 #include "color.hpp"
-#include "window.hpp"
+// #include "window.hpp"
 
 class Rectangle {
   private:
@@ -22,8 +22,8 @@ class Rectangle {
     float circumference_;
     float circumference();
     Color get_color() const;
-    void draw(Window& window);
-    void draw(Window& window, Color color);
+    // void draw(Window& window);
+    // void draw(Window& window, Color color);
     bool is_inside(Vec2 v1);
 };
 
