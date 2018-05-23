@@ -39,7 +39,8 @@ for(auto& i : all_three) {
     i = rand() % 100;
 }
 all_three.erase(std::remove_if( all_three.begin(), all_three.end(), is_not_multiple_of_3), all_three.end() );
- 
+
 return Catch::Session().run(argc, argv);
 
 }
+

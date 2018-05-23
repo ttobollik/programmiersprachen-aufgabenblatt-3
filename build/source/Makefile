@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/aufgabe_13.dir/rule:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_13.dir/rule
+.PHONY : source/CMakeFiles/aufgabe_13.dir/rule
+
+# Convenience name for target.
+aufgabe_13: source/CMakeFiles/aufgabe_13.dir/rule
+
+.PHONY : aufgabe_13
+
+# fast build rule for target.
+aufgabe_13/fast:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_13.dir/build.make source/CMakeFiles/aufgabe_13.dir/build
+.PHONY : aufgabe_13/fast
+
+# Convenience name for target.
 source/CMakeFiles/aufgabe_9.dir/rule:
 	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_9.dir/rule
 .PHONY : source/CMakeFiles/aufgabe_9.dir/rule
@@ -171,6 +186,36 @@ aufgabe_4/fast:
 .PHONY : aufgabe_4/fast
 
 # Convenience name for target.
+source/CMakeFiles/aufgabe_14.dir/rule:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_14.dir/rule
+.PHONY : source/CMakeFiles/aufgabe_14.dir/rule
+
+# Convenience name for target.
+aufgabe_14: source/CMakeFiles/aufgabe_14.dir/rule
+
+.PHONY : aufgabe_14
+
+# fast build rule for target.
+aufgabe_14/fast:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_14.dir/build.make source/CMakeFiles/aufgabe_14.dir/build
+.PHONY : aufgabe_14/fast
+
+# Convenience name for target.
+source/CMakeFiles/aufgabe_12.dir/rule:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_12.dir/rule
+.PHONY : source/CMakeFiles/aufgabe_12.dir/rule
+
+# Convenience name for target.
+aufgabe_12: source/CMakeFiles/aufgabe_12.dir/rule
+
+.PHONY : aufgabe_12
+
+# fast build rule for target.
+aufgabe_12/fast:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_12.dir/build.make source/CMakeFiles/aufgabe_12.dir/build
+.PHONY : aufgabe_12/fast
+
+# Convenience name for target.
 source/CMakeFiles/aufgabe_2_und_3.dir/rule:
 	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_2_und_3.dir/rule
 .PHONY : source/CMakeFiles/aufgabe_2_und_3.dir/rule
@@ -211,6 +256,87 @@ aufgabe_11.s: aufgabe_11.cpp.s
 aufgabe_11.cpp.s:
 	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_11.dir/build.make source/CMakeFiles/aufgabe_11.dir/aufgabe_11.cpp.s
 .PHONY : aufgabe_11.cpp.s
+
+aufgabe_12.o: aufgabe_12.cpp.o
+
+.PHONY : aufgabe_12.o
+
+# target to build an object file
+aufgabe_12.cpp.o:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_12.dir/build.make source/CMakeFiles/aufgabe_12.dir/aufgabe_12.cpp.o
+.PHONY : aufgabe_12.cpp.o
+
+aufgabe_12.i: aufgabe_12.cpp.i
+
+.PHONY : aufgabe_12.i
+
+# target to preprocess a source file
+aufgabe_12.cpp.i:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_12.dir/build.make source/CMakeFiles/aufgabe_12.dir/aufgabe_12.cpp.i
+.PHONY : aufgabe_12.cpp.i
+
+aufgabe_12.s: aufgabe_12.cpp.s
+
+.PHONY : aufgabe_12.s
+
+# target to generate assembly for a file
+aufgabe_12.cpp.s:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_12.dir/build.make source/CMakeFiles/aufgabe_12.dir/aufgabe_12.cpp.s
+.PHONY : aufgabe_12.cpp.s
+
+aufgabe_13.o: aufgabe_13.cpp.o
+
+.PHONY : aufgabe_13.o
+
+# target to build an object file
+aufgabe_13.cpp.o:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_13.dir/build.make source/CMakeFiles/aufgabe_13.dir/aufgabe_13.cpp.o
+.PHONY : aufgabe_13.cpp.o
+
+aufgabe_13.i: aufgabe_13.cpp.i
+
+.PHONY : aufgabe_13.i
+
+# target to preprocess a source file
+aufgabe_13.cpp.i:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_13.dir/build.make source/CMakeFiles/aufgabe_13.dir/aufgabe_13.cpp.i
+.PHONY : aufgabe_13.cpp.i
+
+aufgabe_13.s: aufgabe_13.cpp.s
+
+.PHONY : aufgabe_13.s
+
+# target to generate assembly for a file
+aufgabe_13.cpp.s:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_13.dir/build.make source/CMakeFiles/aufgabe_13.dir/aufgabe_13.cpp.s
+.PHONY : aufgabe_13.cpp.s
+
+aufgabe_14.o: aufgabe_14.cpp.o
+
+.PHONY : aufgabe_14.o
+
+# target to build an object file
+aufgabe_14.cpp.o:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_14.dir/build.make source/CMakeFiles/aufgabe_14.dir/aufgabe_14.cpp.o
+.PHONY : aufgabe_14.cpp.o
+
+aufgabe_14.i: aufgabe_14.cpp.i
+
+.PHONY : aufgabe_14.i
+
+# target to preprocess a source file
+aufgabe_14.cpp.i:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_14.dir/build.make source/CMakeFiles/aufgabe_14.dir/aufgabe_14.cpp.i
+.PHONY : aufgabe_14.cpp.i
+
+aufgabe_14.s: aufgabe_14.cpp.s
+
+.PHONY : aufgabe_14.s
+
+# target to generate assembly for a file
+aufgabe_14.cpp.s:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_14.dir/build.make source/CMakeFiles/aufgabe_14.dir/aufgabe_14.cpp.s
+.PHONY : aufgabe_14.cpp.s
 
 aufgabe_2_und_3.o: aufgabe_2_und_3.cpp.o
 
@@ -441,15 +567,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... aufgabe_13"
 	@echo "... aufgabe_9"
 	@echo "... aufgabe_11"
 	@echo "... rebuild_cache"
 	@echo "... aufgabe_6"
 	@echo "... aufgabe_4"
+	@echo "... aufgabe_14"
+	@echo "... aufgabe_12"
 	@echo "... aufgabe_2_und_3"
 	@echo "... aufgabe_11.o"
 	@echo "... aufgabe_11.i"
 	@echo "... aufgabe_11.s"
+	@echo "... aufgabe_12.o"
+	@echo "... aufgabe_12.i"
+	@echo "... aufgabe_12.s"
+	@echo "... aufgabe_13.o"
+	@echo "... aufgabe_13.i"
+	@echo "... aufgabe_13.s"
+	@echo "... aufgabe_14.o"
+	@echo "... aufgabe_14.i"
+	@echo "... aufgabe_14.s"
 	@echo "... aufgabe_2_und_3.o"
 	@echo "... aufgabe_2_und_3.i"
 	@echo "... aufgabe_2_und_3.s"
