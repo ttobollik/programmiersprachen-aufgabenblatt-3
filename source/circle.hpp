@@ -10,8 +10,8 @@
 
 class Circle {
   private:
-    const float radius_;
-    const Vec2 center_;
+    float radius_;
+    Vec2 center_;
     Color color_;
     std::string name_;
   

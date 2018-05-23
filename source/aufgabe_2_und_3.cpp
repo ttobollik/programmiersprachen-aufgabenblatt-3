@@ -2,6 +2,8 @@
 #include <iostream>
 #include <set>
 #include <map>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -54,5 +56,16 @@ for(auto& element: occurence) {
     cout << element.first << " : " << element.second << ". \n";
 }
 
+
+
+//Aufgabe 3.10
+vector<int> copyList(numbers.size());
+copy(numbers.begin(), numbers.end(), copyList.begin());
+
+for(auto& a : copyList) {
+    cout << a << ", ";
+}
+
 return 0;
 }
+

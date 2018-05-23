@@ -20,6 +20,13 @@
         "array": "cpp",
         "initializer_list": "cpp",
         "string_view": "cpp",
-        "__string": "cpp"
+        "__string": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "type_traits": "cpp"
     }
 }
