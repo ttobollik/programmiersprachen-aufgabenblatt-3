@@ -70,6 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/nanovg.dir/DependInfo.cmake"
   "external/glfw-3.2.1/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "source/CMakeFiles/quicksort.dir/DependInfo.cmake"
   "source/CMakeFiles/aufgabe_13.dir/DependInfo.cmake"
   "source/CMakeFiles/aufgabe_9.dir/DependInfo.cmake"
   "source/CMakeFiles/aufgabe_11.dir/DependInfo.cmake"

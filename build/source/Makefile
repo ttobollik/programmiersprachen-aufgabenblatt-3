@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/quicksort.dir/rule:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/quicksort.dir/rule
+.PHONY : source/CMakeFiles/quicksort.dir/rule
+
+# Convenience name for target.
+quicksort: source/CMakeFiles/quicksort.dir/rule
+
+.PHONY : quicksort
+
+# fast build rule for target.
+quicksort/fast:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/build
+.PHONY : quicksort/fast
+
+# Convenience name for target.
 source/CMakeFiles/aufgabe_13.dir/rule:
 	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe_13.dir/rule
 .PHONY : source/CMakeFiles/aufgabe_13.dir/rule
@@ -506,6 +521,33 @@ mat2.cpp.s:
 	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/aufgabe_4.dir/build.make source/CMakeFiles/aufgabe_4.dir/mat2.cpp.s
 .PHONY : mat2.cpp.s
 
+quicksort.o: quicksort.cpp.o
+
+.PHONY : quicksort.o
+
+# target to build an object file
+quicksort.cpp.o:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/quicksort.cpp.o
+.PHONY : quicksort.cpp.o
+
+quicksort.i: quicksort.cpp.i
+
+.PHONY : quicksort.i
+
+# target to preprocess a source file
+quicksort.cpp.i:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/quicksort.cpp.i
+.PHONY : quicksort.cpp.i
+
+quicksort.s: quicksort.cpp.s
+
+.PHONY : quicksort.s
+
+# target to generate assembly for a file
+quicksort.cpp.s:
+	cd /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build && $(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/quicksort.cpp.s
+.PHONY : quicksort.cpp.s
+
 rectangle.o: rectangle.cpp.o
 
 .PHONY : rectangle.o
@@ -573,6 +615,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... quicksort"
 	@echo "... aufgabe_13"
 	@echo "... aufgabe_9"
 	@echo "... aufgabe_11"
@@ -612,6 +655,9 @@ help:
 	@echo "... mat2.o"
 	@echo "... mat2.i"
 	@echo "... mat2.s"
+	@echo "... quicksort.o"
+	@echo "... quicksort.i"
+	@echo "... quicksort.s"
 	@echo "... rectangle.o"
 	@echo "... rectangle.i"
 	@echo "... rectangle.s"

@@ -58,7 +58,7 @@ for(auto& element: occurence) {
 
 
 
-//Aufgabe 3.10
+//Aufgabe 3.10 Elemente der Liste in einen Vektor kopieren
 vector<int> copyList(numbers.size());
 copy(numbers.begin(), numbers.end(), copyList.begin());
 

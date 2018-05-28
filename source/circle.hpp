@@ -24,6 +24,7 @@ class Circle {
     Circle(float radius, std::string const& name_);
     Circle(float radius, Color const& color, std::string const& name_);
     Circle(Color const& color, std::string const& name_);
+    
     float get_radius() const;
     Vec2 get_center() const;
     float circumference();
@@ -35,9 +36,9 @@ class Circle {
 };
 
 std::ostream& operator<<(std::ostream& os, Circle const& c);
-bool operator<(Circle const& c1, Circle const& c2);
-bool operator>(Circle const& c1, Circle const& c2);
-bool operator==(Circle const& c1, Circle const& c2);
+bool operator<(Circle const& c1, Circle const& c2); //Operatoren ueberladen
+bool operator>(Circle const& c1, Circle const& c2); //Operatoren ueberladen
+bool operator==(Circle const& c1, Circle const& c2); //Operatoren ueberladen
 
 
 

@@ -11,7 +11,7 @@
 
     auto three = [] (Circle const& i) -> bool {return i.get_radius() > 3;};
 
-    std::vector <Circle>sorted_vec(circles.size(), 4);
+    std::vector <Circle>sorted_vec(circles.size());
 
     
 
@@ -23,7 +23,8 @@
 int main(int argc, char* argv[]) {
 
     auto four = [] (Circle const& i) -> bool {return i.get_radius() >= 4;};
-    std::copy_if(circles.begin(), circles.end(), sorted_vec.begin(), four);
+    auto it = std::copy_if(circles.begin(), circles.end(), sorted_vec.begin(), four);
+    sorted_vec.resize(std::distance(sorted_vec.begin(),it));
 
     for(auto& i : sorted_vec) {
         std::cout << i.get_radius() << ", ";

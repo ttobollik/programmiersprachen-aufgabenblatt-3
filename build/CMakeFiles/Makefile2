@@ -173,6 +173,7 @@ clean: external/glfw-3.2.1/src/CMakeFiles/glfw.dir/clean
 # Directory level rules for directory source
 
 # Convenience name for "all" pass in the directory.
+source/all: source/CMakeFiles/quicksort.dir/all
 source/all: source/CMakeFiles/aufgabe_13.dir/all
 source/all: source/CMakeFiles/aufgabe_9.dir/all
 source/all: source/CMakeFiles/aufgabe_11.dir/all
@@ -185,6 +186,7 @@ source/all: source/CMakeFiles/aufgabe_2_und_3.dir/all
 .PHONY : source/all
 
 # Convenience name for "clean" pass in the directory.
+source/clean: source/CMakeFiles/quicksort.dir/clean
 source/clean: source/CMakeFiles/aufgabe_13.dir/clean
 source/clean: source/CMakeFiles/aufgabe_9.dir/clean
 source/clean: source/CMakeFiles/aufgabe_11.dir/clean
@@ -200,6 +202,43 @@ source/clean: source/CMakeFiles/aufgabe_2_und_3.dir/clean
 source/preinstall:
 
 .PHONY : source/preinstall
+
+#=============================================================================
+# Target rules for target source/CMakeFiles/quicksort.dir
+
+# All Build rule for target.
+source/CMakeFiles/quicksort.dir/all:
+	$(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/depend
+	$(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build/CMakeFiles --progress-num=41,42 "Built target quicksort"
+.PHONY : source/CMakeFiles/quicksort.dir/all
+
+# Include target in all.
+all: source/CMakeFiles/quicksort.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+source/CMakeFiles/quicksort.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/quicksort.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Theresa/Desktop/programmiersprachen-aufgabenblatt-3/build/CMakeFiles 0
+.PHONY : source/CMakeFiles/quicksort.dir/rule
+
+# Convenience name for target.
+quicksort: source/CMakeFiles/quicksort.dir/rule
+
+.PHONY : quicksort
+
+# clean rule for target.
+source/CMakeFiles/quicksort.dir/clean:
+	$(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/clean
+.PHONY : source/CMakeFiles/quicksort.dir/clean
+
+# clean rule for target.
+clean: source/CMakeFiles/quicksort.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target source/CMakeFiles/aufgabe_13.dir

@@ -11,14 +11,15 @@
 //Aufgabe 3.8
 
 struct smaller_then {
-    bool operator() (Circle c1, Circle c2) {
+    bool operator() (Circle const& c1, Circle const& c2) {
         return c1.get_radius() < c2.get_radius();
     }
 };
 
 
 //Aufgabe 3.6
-  
+
+//Kreiserstellung  
   Circle moon(1, "moon");
   Circle saturn(2, "saturn");
   Circle mars(3, "mars");
@@ -34,11 +35,11 @@ int main(int argc, char *argv[])
 
  std::sort(sorted_circles.begin(), sorted_circles.end());
 
- //Aufgabe 3.7
+ //Aufgabe 3.7 - Lambda
   auto comparator = [](Circle const& c1, Circle const& c2) -> bool { return c1.get_radius() < c2.get_radius();};
   sort(sorted_circles.begin(), sorted_circles.end(), comparator);
 
-//Aufgabe 3.8
+//Aufgabe 3.8 - Funktor
  smaller_then fn;
  sort(sorted_circles.begin(), sorted_circles.end(), smaller_then());
 

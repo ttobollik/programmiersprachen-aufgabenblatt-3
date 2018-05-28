@@ -3,14 +3,15 @@
 #include <algorithm>
 using namespace std;
 
-bool exists(set<Circle>& Circles, string& name){ //TESTEN, KLAPPT NICHT
+bool exists(set<Circle>& Circles, string& name){ //Prueft ob der Name schon existiert
+bool answer = true;
     for (auto& element : Circles) {
         if (element.get_name()== name) {
            cout << "This name is in use already. Restarting...." << "\n"; 
-           return false;
+           answer = false;
         } 
     }
-    return true;
+    return answer;
 }
 
 
@@ -20,7 +21,7 @@ int main() {
     int go_on = 1;
     set<Circle> Circles;
 
-    while (go_on == 1) {
+    while (go_on == 1) { //Schleife um das Programm wiederholt ausfuehren zu lassen
     
     string circle_name;
     cout << "Please enter a name for the circle you want to create" << "\n";

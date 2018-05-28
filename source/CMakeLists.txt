@@ -50,4 +50,10 @@ add_executable(aufgabe_14
  vec2.cpp
  )
 
+#Build quick sort
+add_executable(quicksort
+ quicksort.cpp
+ )
+
+
 

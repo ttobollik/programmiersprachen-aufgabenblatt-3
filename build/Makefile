@@ -137,6 +137,19 @@ glfw/fast:
 .PHONY : glfw/fast
 
 #=============================================================================
+# Target rules for targets named quicksort
+
+# Build rule for target.
+quicksort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 quicksort
+.PHONY : quicksort
+
+# fast build rule for target.
+quicksort/fast:
+	$(MAKE) -f source/CMakeFiles/quicksort.dir/build.make source/CMakeFiles/quicksort.dir/build
+.PHONY : quicksort/fast
+
+#=============================================================================
 # Target rules for targets named aufgabe_13
 
 # Build rule for target.
@@ -277,6 +290,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... nanovg"
 	@echo "... glfw"
+	@echo "... quicksort"
 	@echo "... aufgabe_13"
 	@echo "... aufgabe_9"
 	@echo "... aufgabe_11"

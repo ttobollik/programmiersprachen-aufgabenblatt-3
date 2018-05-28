@@ -45,7 +45,9 @@
     }
 
 
-//Aufgabenblatt 3
+//Aufgabenblatt 3 
+
+//Aufgabe 3.4
     std::ostream& operator<<(std::ostream& os, Circle const& c) {
         c.print(os);
       return os;
@@ -60,7 +62,7 @@
         return name_;
     }
 
-
+//Operatoren ueberladen
     bool operator<(Circle const& c1, Circle const& c2) {
         return c1.get_radius()< c2.get_radius();
     }
